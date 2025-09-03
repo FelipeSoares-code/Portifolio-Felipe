@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom';
 import Card from '../componentes/Card';
+import styles from '../estilos/Apresentacao.module.css';
 
 export default function Apresentacao() {
     return (
-        <>
+        <div className={'flex flex-col gap-8 p-4'}>
             {/*introdução GitHub e linkedin*/}
-            <section className="introducao flex flex-col">
+            <section className={`${styles.introducao} flex flex-col`}>
                 <h1>Felipe Soares</h1>
                 <h2>Desenvolvedor de Sites e Apps</h2>
-                <div className="flex gap-4">
+                <div className={'flex gap-4'}>
                     <Link to="https://github.com/felipeSoares-code" target="_blank">
                         GitHub
                     </Link>
@@ -21,7 +22,7 @@ export default function Apresentacao() {
             {/*Projetos*/}
             <section>
                 <h1 className='text-center'>Projeto Realizados</h1>
-                <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-8'>
+                <div className='grid sm:grid-cols-1 md:grid-cols-3 gap-8'>
                     <Card
                         titulo="LemonCoin" 
                         p="LemonCoin é um aplicativo de gestão financeira para Android e Web" 
@@ -39,6 +40,6 @@ export default function Apresentacao() {
                     />
                 </div>
             </section>
-        </>
+        </div>
     )
 }
