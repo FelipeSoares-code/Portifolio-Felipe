@@ -1,25 +1,38 @@
 @media (max-width: 600px) {
     .introducao {
+        text-align: center;
         h1 {
-            font-size: 2.5em;
+            font-size: 1em;
         }
         h2 {
-            font-size: 8px;
+            font-size: 2px;
         }
     }
 }
 .introducao {
+    background-image: linear-gradient(to bottom, #030712, #0b1b46);
+    height: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     h1 {
         font-size: 4em;
         font-weight: bold;
+        color: #1b41aa;
     }
     h2 {
         font-size: 2em;
-        color: gray;
+        color: #00bcff;
     }
     a {
         text-decoration: none;
-        color: blue;
+        color: white;
+        font-weight: bold;
+        background-color: #1b41aa;
+        padding: 10px 20px;
         &:hover {
             text-decoration: underline;
         }

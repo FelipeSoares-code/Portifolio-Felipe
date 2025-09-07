@@ -4,9 +4,9 @@ import styles from '../estilos/Apresentacao.module.css';
 
 export default function Apresentacao() {
     return (
-        <div className={'flex flex-col gap-8 p-4'}>
+        <div className={'flex flex-col gap-8 p-0 bg-[#030712]'}>
             {/*introdução GitHub e linkedin*/}
-            <section className={`${styles.introducao} flex flex-col`}>
+            <section className={`${styles.introducao}`}>
                 <h1>Felipe Soares</h1>
                 <h2>Desenvolvedor de Sites e Apps</h2>
                 <div className={'flex gap-4'}>
@@ -17,6 +17,14 @@ export default function Apresentacao() {
                         LinkedIn
                     </Link>
                 </div>
+            </section>
+
+            {/* sobre mim */}
+            <section className='flex flex-col gap-4 p-8' style={{color: 'white'}}   >
+                <h1 className='text-center'>Sobre Mim</h1>
+                <p className='mx-20'>
+                    Olá! Meu nome é Felipe Soares, tenho 19 anos e sou um desenvolvedor de sites e aplicativos.
+                </p>
             </section>
 
             {/*Projetos*/}
