@@ -4,18 +4,23 @@ import styles from '../estilos/Apresentacao.module.css';
 
 export default function Apresentacao() {
     return (
-        <div className={'flex flex-col gap-8 p-0 bg-[#030712]'}>
+        <div className={'flex flex-col gap-8 p-0 bg-[#030712] pb-10'}>
             {/*introdução GitHub e linkedin*/}
             <section className={`${styles.introducao}`}>
-                <h1>Felipe Soares</h1>
-                <h2>Desenvolvedor de Sites e Apps</h2>
-                <div className={'flex gap-4'}>
-                    <Link to="https://github.com/felipeSoares-code" target="_blank">
-                        GitHub
-                    </Link>
-                    <Link to="https://www.linkedin.com/in/felipe-soares-125132204/" target="_blank">
-                        LinkedIn
-                    </Link>
+                <div className='w-full flex flex-col gap-2'>
+                    <h1>Felipe Soares</h1>
+                    <h2>Desenvolvedor de Sites e Apps</h2>
+                    <div className={'flex gap-4'}>
+                        <Link to="https://github.com/felipeSoares-code" target="_blank">
+                            GitHub
+                        </Link>
+                        <Link to="https://www.linkedin.com/in/felipe-soares-125132204/" target="_blank">
+                            LinkedIn
+                        </Link>
+                    </div>
+                </div>
+                <div className='text-center border w-full'>
+                    <p>Hello wordl</p>
                 </div>
             </section>
 

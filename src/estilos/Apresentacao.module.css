@@ -1,4 +1,4 @@
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .introducao {
         text-align: center;
         h1 {
@@ -10,14 +10,15 @@
     }
 }
 .introducao {
-    background-image: linear-gradient(to bottom, #030712, #0b1b46);
+    background-image: linear-gradient(to bottom, #e4f1f8, #a3b0d3);
     height: 70vh;
 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: left;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
+    padding: 20px;
     h1 {
         font-size: 4em;
         font-weight: bold;
