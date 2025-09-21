@@ -19,23 +19,18 @@ export default function Apresentacao() {
                         </Link>
                     </div>
                 </div>
-                <div className='text-center border w-full'>
-                    <p>Hello wordl</p>
+                <div className='text-center w-full md:flex md:justify-end'>
+                    <p className='text-justify mr-10' style={{color: 'white'}}>
+                        Olá! Meu nome é Felipe Soares, tenho 22 anos e sou um desenvolvedor de sites e aplicativos. Sou formado em Análise e Desenvolvimento de Sistemas e tenho experiência em diversas tecnologias, incluindo React, React Native, Node.js, HTML, CSS e JavaScript.
+                        Apaixonado por tecnologia, estou sempre em busca de novos desafios e oportunidades para aprimorar minhas habilidades.
+                    </p>
                 </div>
             </section>
 
-            {/* sobre mim */}
-            <section className='flex flex-col gap-4 p-8' style={{color: 'white'}}   >
-                <h1 className='text-center'>Sobre Mim</h1>
-                <p className='mx-20'>
-                    Olá! Meu nome é Felipe Soares, tenho 19 anos e sou um desenvolvedor de sites e aplicativos.
-                </p>
-            </section>
-
             {/*Projetos*/}
-            <section>
-                <h1 className='text-center'>Projeto Realizados</h1>
-                <div className='grid sm:grid-cols-1 md:grid-cols-3 gap-8'>
+            <section className='mt-20'>
+                <h1 className='text-center text-white text-[25px] font-bold mb-8 mt-5'>Projeto Realizados</h1>
+                <div className='grid sm:grid-cols-1 md:grid-cols-3 gap-5 px-5'>
                     <Card
                         titulo="LemonCoin" 
                         p="LemonCoin é um aplicativo de gestão financeira para Android e Web" 

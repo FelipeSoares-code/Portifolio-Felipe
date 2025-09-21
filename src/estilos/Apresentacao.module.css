@@ -1,6 +1,6 @@
 @media (max-width: 768px) {
     .introducao {
-        text-align: center;
+        flex-direction: column;
         h1 {
             font-size: 1em;
         }
@@ -10,11 +10,11 @@
     }
 }
 .introducao {
-    background-image: linear-gradient(to bottom, #e4f1f8, #a3b0d3);
+    /* background-image: linear-gradient(to bottom, #e4f1f8, #a3b0d3); */
+    background-color: #030e2d;
     height: 70vh;
 
     display: flex;
-    flex-direction: row;
     justify-content: left;
     align-items: center;
     gap: 40px;
@@ -22,11 +22,11 @@
     h1 {
         font-size: 4em;
         font-weight: bold;
-        color: #1b41aa;
+        color: white;
     }
     h2 {
         font-size: 2em;
-        color: #00bcff;
+        color: #95b9c6;
     }
     a {
         text-decoration: none;
