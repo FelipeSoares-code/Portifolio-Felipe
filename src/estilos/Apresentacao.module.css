@@ -1,18 +1,13 @@
 @media (max-width: 768px) {
     .introducao {
         flex-direction: column;
-        h1 {
-            font-size: 1em;
-        }
-        h2 {
-            font-size: 2px;
-        }
+        padding-top: 40px;
     }
 }
 .introducao {
-    /* background-image: linear-gradient(to bottom, #e4f1f8, #a3b0d3); */
+    background-image: linear-gradient(to bottom, black, #0c1b44); 
     background-color: #030e2d;
-    height: 70vh;
+    height: 100vh;
 
     display: flex;
     justify-content: left;

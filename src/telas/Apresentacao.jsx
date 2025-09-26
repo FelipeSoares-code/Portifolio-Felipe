@@ -6,7 +6,7 @@ export default function Apresentacao() {
     return (
         <div className={'flex flex-col gap-8 p-0 bg-[#030712] pb-10'}>
             {/*introdução GitHub e linkedin*/}
-            <section className={`${styles.introducao}`}>
+            <section className={`${styles.introducao} lg:flex-row md:flex-col`}>
                 <div className='w-full flex flex-col gap-2'>
                     <h1>Felipe Soares</h1>
                     <h2>Desenvolvedor de Sites e Apps</h2>
@@ -28,8 +28,8 @@ export default function Apresentacao() {
             </section>
 
             {/*Projetos*/}
-            <section className='mt-20'>
-                <h1 className='text-center text-white text-[25px] font-bold mb-8 mt-5'>Projeto Realizados</h1>
+            <section>
+                <h1 className='text-center text-white text-[25px] font-bold mb-8 mt-20'>Projeto Realizados</h1>
                 <div className='grid sm:grid-cols-1 md:grid-cols-3 gap-5 px-5'>
                     <Card
                         titulo="LemonCoin" 
