@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Card from '../componentes/Card';
+import fotoCodigo from '../imagens/fotoCodigo.jpg'
 import styles from '../estilos/Apresentacao.module.css';
 
 export default function Apresentacao() {
@@ -46,6 +47,20 @@ export default function Apresentacao() {
                         p="Site feito para divulgação da clínica de uma Psicologa em São Bernardo do Campo" 
                         link="https://ritasoarespsicologa.com.br"
                     />
+                </div>
+                <hr className='text-[#1e2939] m-10 mb-0' />
+            </section>
+
+            {/* LemonCoin */}
+            <section id='Lemoncoin' className='text-white p-10'>
+                <h1 className='text-center text-[20px] font-bold mb-15'>LemonCoin</h1>
+                <div className='flex flex-row'>
+                    <img src={fotoCodigo} alt="" className='w-[500px]' />
+                    <p>
+                        O LemonCoin é em um aplicativo de gestão financeira disponivel para Web e Android. <br />
+                        Pelo LemonCoin é possível registrar movimentações financeiras, vincular categorias a essas movimentações e exportar uma planilha personalizada com as movimentações registradas. <br />
+                        O aplicativo é 100% conectado entre a versão web e mobile, com atualização em tempo real em caso de mudança de registro
+                    </p>
                 </div>
             </section>
         </div>
