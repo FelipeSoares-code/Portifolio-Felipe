@@ -23,14 +23,16 @@
         font-size: 2em;
         color: #95b9c6;
     }
-    a {
-        text-decoration: none;
-        color: white;
-        font-weight: bold;
-        background-color: #1b41aa;
-        padding: 10px 20px;
-        &:hover {
-            text-decoration: underline;
-        }
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: #1b41aa;
+    padding: 10px 20px;
+    border-radius: 5px;
+    &:hover {
+        text-decoration: underline;
     }
 }

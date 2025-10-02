@@ -4,6 +4,10 @@ import fotoCodigo from '../imagens/fotoCodigo.jpg'
 import styles from '../estilos/Apresentacao.module.css';
 
 export default function Apresentacao() {
+    const linkLemonMobile = "https://github.com/Hebertz21/LemonCoinMobile/releases"
+    
+    const linkLemonWeb = "https://github.com/IntiGenovez/LemonCoin/releases"
+
     return (
         <div className={'flex flex-col gap-8 p-0 bg-[#030712] pb-10'}>
             {/*introdução GitHub e linkedin*/}
@@ -12,10 +16,10 @@ export default function Apresentacao() {
                     <h1>Felipe Soares</h1>
                     <h2>Desenvolvedor de Sites e Apps</h2>
                     <div className={'flex gap-4'}>
-                        <Link to="https://github.com/felipeSoares-code" target="_blank">
+                        <Link className={styles.link} to="https://github.com/felipeSoares-code" target="_blank">
                             GitHub
                         </Link>
-                        <Link to="https://www.linkedin.com/in/felipe-soares-125132204/" target="_blank">
+                        <Link className={styles.link} to="https://www.linkedin.com/in/felipe-soares-125132204/" target="_blank">
                             LinkedIn
                         </Link>
                     </div>
@@ -54,13 +58,19 @@ export default function Apresentacao() {
             {/* LemonCoin */}
             <section id='Lemoncoin' className='text-white p-10'>
                 <h1 className='text-center text-[20px] font-bold mb-15'>LemonCoin</h1>
-                <div className='flex flex-row'>
-                    <img src={fotoCodigo} alt="" className='w-[500px]' />
-                    <p>
-                        O LemonCoin é em um aplicativo de gestão financeira disponivel para Web e Android. <br />
-                        Pelo LemonCoin é possível registrar movimentações financeiras, vincular categorias a essas movimentações e exportar uma planilha personalizada com as movimentações registradas. <br />
-                        O aplicativo é 100% conectado entre a versão web e mobile, com atualização em tempo real em caso de mudança de registro
-                    </p>
+                <div className='flex flex-col gap-8 lg:flex-row'>
+                    <img src={fotoCodigo} alt="" className='w-full lg:w-[50%]' />
+                    <div>
+                        <p>
+                            O LemonCoin é em um aplicativo de gestão financeira disponivel para Web e Android. <br />
+                            Pelo LemonCoin é possível registrar movimentações financeiras, vincular categorias a essas movimentações e exportar uma planilha personalizada com as movimentações registradas. <br />
+                            O aplicativo é 100% conectado entre a versão web e mobile, com atualização em tempo real em caso de mudança de registro
+                        </p>
+                        <div className='flex flex-col w-[75%] lg:w-[500px] lg:flex-row gap-2 mt-5 md:justify-center lg:justify-start'>
+                            <Link className={styles.link} to={linkLemonMobile}>Veja o LemonCoin Mobile</Link>
+                            <Link className={styles.link} to={linkLemonWeb}>Veja o LemonCoin Web</Link>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
