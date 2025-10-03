@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import Card from '../componentes/Card';
 import fotoCodigo from '../imagens/fotoCodigo.jpg'
+import homeLemon from '../imagens/home-lemon.png'
+import homeLemonWeb from '../imagens/home-lemon-web.png'
 import styles from '../estilos/Apresentacao.module.css';
 
 export default function Apresentacao() {
@@ -57,16 +59,19 @@ export default function Apresentacao() {
 
             {/* LemonCoin */}
             <section id='Lemoncoin' className='text-white p-10'>
-                <h1 className='text-center text-[20px] font-bold mb-15'>LemonCoin</h1>
-                <div className='flex flex-col gap-8 lg:flex-row'>
-                    <img src={fotoCodigo} alt="" className='w-full lg:w-[50%]' />
-                    <div>
+                <h1 className='text-center text-[20px] font-bold mb-7'>LemonCoin</h1>
+                <div className='flex flex-col gap-15 lg:flex-row justify-center'>
+                    <div className={`flex flex-col items-center gap-8 md:flex-row justify-center ${styles.img}`}>
+                        <img className='h-[500px]' src={homeLemon} alt="tela de home LemonCoin mobile" />
+                        <img className='h-[500px]' src={homeLemonWeb} alt="tela de home LemonCoin mobile" />
+                    </div>
+                    <div className='lg:w-[45%]'>
                         <p>
                             O LemonCoin é em um aplicativo de gestão financeira disponivel para Web e Android. <br />
                             Pelo LemonCoin é possível registrar movimentações financeiras, vincular categorias a essas movimentações e exportar uma planilha personalizada com as movimentações registradas. <br />
                             O aplicativo é 100% conectado entre a versão web e mobile, com atualização em tempo real em caso de mudança de registro
                         </p>
-                        <div className='flex flex-col w-[75%] lg:w-[500px] lg:flex-row gap-2 mt-5 md:justify-center lg:justify-start'>
+                        <div className='flex flex-col w-[250px] md:w-[500px] md:flex-row gap-2 mt-5 lg:justify-start'>
                             <Link className={styles.link} to={linkLemonMobile}>Veja o LemonCoin Mobile</Link>
                             <Link className={styles.link} to={linkLemonWeb}>Veja o LemonCoin Web</Link>
                         </div>
