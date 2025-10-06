@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import Card from '../componentes/Card';
-import fotoCodigo from '../imagens/fotoCodigo.jpg'
 import homeLemon from '../imagens/home-lemon.png'
 import homeLemonWeb from '../imagens/home-lemon-web.png'
 import styles from '../estilos/Apresentacao.module.css';
@@ -59,9 +58,9 @@ export default function Apresentacao() {
 
             {/* LemonCoin */}
             <section id='Lemoncoin' className='text-white p-10'>
-                <h1 className='text-center text-[20px] font-bold mb-7'>LemonCoin</h1>
+                <h1 className='text-center text-[25px] font-bold mb-7'>LemonCoin</h1>
                 <div className='flex flex-col gap-15 lg:flex-row justify-center'>
-                    <div className={`flex flex-col items-center gap-8 md:flex-row justify-center ${styles.img}`}>
+                    <div className={`flex flex-col items-center gap-8 md:flex-row justify-center rounded-[20px] border-2 border-[#1e2939] shadow-lg`}>
                         <img className='h-[500px]' src={homeLemon} alt="tela de home LemonCoin mobile" />
                         <img className='h-[500px]' src={homeLemonWeb} alt="tela de home LemonCoin mobile" />
                     </div>
