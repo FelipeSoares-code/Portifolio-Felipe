@@ -3,7 +3,9 @@ import Card from '../componentes/Card';
 import SessaoProj from '../componentes/SessaoProj';
 import homeLemon from '../imagens/home-lemon.png'
 import homeLemonWeb from '../imagens/home-lemon-web.png'
-import styles from '../estilos/Apresentacao.module.css';
+import homeGuincho from '../imagens/home-guincho.png'
+import corpoGuincho from '../imagens/corpo-guincho.png'
+import styles from '../estilos/Apresentacao.module.css'
 
 export default function Apresentacao() {
     const linkLemonMobile = "https://github.com/Hebertz21/LemonCoinMobile/releases"
@@ -58,38 +60,32 @@ export default function Apresentacao() {
             </section>
 
             {/* LemonCoin */}
-            <section id='Lemoncoin' className='text-white p-10'>
-                <h1 className='text-center text-[25px] font-bold mb-7'>LemonCoin</h1>
-                <div className='flex flex-col gap-15 lg:flex-row justify-center'>
-                    <div className={`flex flex-col items-center gap-8 md:flex-row justify-center`}>
-                        <img className='h-[500px] rounded-[20px] border-2 border-[#1e2939] shadow-lg' src={homeLemon} alt="tela de home LemonCoin mobile" />
-                        <img className='h-[500px] rounded-[20px] border-2 border-[#1e2939] shadow-lg' src={homeLemonWeb} alt="tela de home LemonCoin mobile" />
-                    </div>
-                    <div className='lg:w-[45%]'>
-                        <p>
-                            O LemonCoin é em um aplicativo de gestão financeira disponivel para Web e Android. <br />
-                            Pelo LemonCoin é possível registrar movimentações financeiras, vincular categorias a essas movimentações e exportar uma planilha personalizada com as movimentações registradas. <br />
-                            O aplicativo é 100% conectado entre a versão web e mobile, com atualização em tempo real em caso de mudança de registro
-                        </p>
-                        <div className='flex flex-col w-[250px] md:w-[500px] md:flex-row gap-2 mt-5 lg:justify-start'>
-                            <Link className={styles.link} to={linkLemonMobile}>Veja o LemonCoin Mobile</Link>
-                            <Link className={styles.link} to={linkLemonWeb}>Veja o LemonCoin Web</Link>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
             <SessaoProj 
                 id="LemonCoin"
                 img1={homeLemon}
                 img2={homeLemonWeb}
-                imgDireita={false}
+                imgDireita={0}
+
                 titulo="LemonCoin"
                 paragrafo="O LemonCoin é em um aplicativo de gestão financeira disponivel para Web e Android. Pelo LemonCoin é possível registrar movimentações financeiras, vincular categorias a essas movimentações e exportar uma planilha personalizada com as movimentações registradas. O aplicativo é 100% conectado entre a versão web e mobile, com atualização em tempo real em caso de mudança de registro"
-                link1={linkLemonMobile}
-                link2={linkLemonWeb}
-                txtLink1="Veja o LemonCoin Mobile"
-                txtLink2="Veja o LemonCoin Web"
+
+                link={[linkLemonMobile, linkLemonWeb]}
+                txtLink={["Veja o LemonCoin Mobile", "Veja o LemonCoin Web"]}
+            />
+            <hr className='text-[#1e2939] m-10 mb-0' />
+
+            {/* Guincho Cleiton */}
+            <SessaoProj 
+                id="GuinchoCleiton"
+                img1={homeGuincho}
+                img2={corpoGuincho}
+                imgDireita={1}
+
+                titulo="CAS - Guincho Cleiton"
+                paragrafo="Site desenvolvido para divulgação do serviço de guincho em São Bernardo do Campo. O site foi desenvolvido utilizando React, HTML, CSS e JavaScript. O site é responsivo, se adaptando a qualquer tamanho de tela, seja ele desktop ou mobile. O site conta com um formulário de contato que envia as mensagens diretamente para o WhatsApp do cliente."
+
+                link="https://guinchosbc.com.br"
+                txtLink="Veja o site"
             />
         </div>
     )
