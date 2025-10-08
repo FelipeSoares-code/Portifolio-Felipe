@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Card from '../componentes/Card';
+import SessaoProj from '../componentes/SessaoProj';
 import homeLemon from '../imagens/home-lemon.png'
 import homeLemonWeb from '../imagens/home-lemon-web.png'
 import styles from '../estilos/Apresentacao.module.css';
@@ -60,9 +61,9 @@ export default function Apresentacao() {
             <section id='Lemoncoin' className='text-white p-10'>
                 <h1 className='text-center text-[25px] font-bold mb-7'>LemonCoin</h1>
                 <div className='flex flex-col gap-15 lg:flex-row justify-center'>
-                    <div className={`flex flex-col items-center gap-8 md:flex-row justify-center rounded-[20px] border-2 border-[#1e2939] shadow-lg`}>
-                        <img className='h-[500px]' src={homeLemon} alt="tela de home LemonCoin mobile" />
-                        <img className='h-[500px]' src={homeLemonWeb} alt="tela de home LemonCoin mobile" />
+                    <div className={`flex flex-col items-center gap-8 md:flex-row justify-center`}>
+                        <img className='h-[500px] rounded-[20px] border-2 border-[#1e2939] shadow-lg' src={homeLemon} alt="tela de home LemonCoin mobile" />
+                        <img className='h-[500px] rounded-[20px] border-2 border-[#1e2939] shadow-lg' src={homeLemonWeb} alt="tela de home LemonCoin mobile" />
                     </div>
                     <div className='lg:w-[45%]'>
                         <p>
@@ -77,6 +78,19 @@ export default function Apresentacao() {
                     </div>
                 </div>
             </section>
+            
+            <SessaoProj 
+                id="LemonCoin"
+                img1={homeLemon}
+                img2={homeLemonWeb}
+                imgDireita={false}
+                titulo="LemonCoin"
+                paragrafo="O LemonCoin é em um aplicativo de gestão financeira disponivel para Web e Android. Pelo LemonCoin é possível registrar movimentações financeiras, vincular categorias a essas movimentações e exportar uma planilha personalizada com as movimentações registradas. O aplicativo é 100% conectado entre a versão web e mobile, com atualização em tempo real em caso de mudança de registro"
+                link1={linkLemonMobile}
+                link2={linkLemonWeb}
+                txtLink1="Veja o LemonCoin Mobile"
+                txtLink2="Veja o LemonCoin Web"
+            />
         </div>
     )
 }
