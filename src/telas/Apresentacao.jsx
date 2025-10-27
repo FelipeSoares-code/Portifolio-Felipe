@@ -5,6 +5,7 @@ import homeLemon from '../imagens/home-lemon.png'
 import homeLemonWeb from '../imagens/home-lemon-web.png'
 import homeGuincho from '../imagens/home-guincho.png'
 import corpoGuincho from '../imagens/corpo-guincho.png'
+import cardsClinica from '../imagens/cards-clinica.png'
 import styles from '../estilos/Apresentacao.module.css'
 
 export default function Apresentacao() {
@@ -62,9 +63,9 @@ export default function Apresentacao() {
             {/* LemonCoin */}
             <SessaoProj 
                 id="LemonCoin"
-                img1={homeLemon}
-                img2={homeLemonWeb}
+                img={[homeLemon, homeLemonWeb]}
                 imgDireita={0}
+                estiloImg="h-[500px]"
 
                 titulo="LemonCoin"
                 paragrafo="O LemonCoin é em um aplicativo de gestão financeira disponivel para Web e Android. Pelo LemonCoin é possível registrar movimentações financeiras, vincular categorias a essas movimentações e exportar uma planilha personalizada com as movimentações registradas. O aplicativo é 100% conectado entre a versão web e mobile, com atualização em tempo real em caso de mudança de registro"
@@ -77,15 +78,28 @@ export default function Apresentacao() {
             {/* Guincho Cleiton */}
             <SessaoProj 
                 id="GuinchoCleiton"
-                img1={homeGuincho}
-                img2={corpoGuincho}
+                img={[homeGuincho, corpoGuincho]}
                 imgDireita={1}
+                estiloImg="h-[500px]"
 
                 titulo="CAS - Guincho Cleiton"
-                paragrafo="Site desenvolvido para divulgação do serviço de guincho em São Bernardo do Campo. O site foi desenvolvido utilizando React, HTML, CSS e JavaScript. O site é responsivo, se adaptando a qualquer tamanho de tela, seja ele desktop ou mobile. O site conta com um formulário de contato que envia as mensagens diretamente para o WhatsApp do cliente."
+                paragrafo="Site desenvolvido para divulgação do serviço de guincho em São Bernardo do Campo. O site foi desenvolvido utilizando React, HTML, CSS e JavaScript. O site é responsivo, se adaptando a qualquer tamanho de tela, seja ele desktop ou mobile."
 
                 link="https://guinchosbc.com.br"
                 txtLink="Veja o site"
+            />
+
+            {/* site cuidando de mim */}
+            <SessaoProj
+                id="Cuidando-de-Mim"
+                img={cardsClinica}
+                estiloImg={"w-200"}
+
+                titulo="Clinica - Cuidando de Mim"
+                paragrafo="Site desenvolvido para a psicologa Rita Soares, para divulgação de seu trabalho com profissional. O site foi feito usando React"
+
+                link={"/"}
+                txtLink="Veja o Site"
             />
         </div>
     )
