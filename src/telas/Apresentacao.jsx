@@ -6,13 +6,20 @@ import homeLemonWeb from '../imagens/home-lemon-web.png'
 import homeGuincho from '../imagens/home-guincho.png'
 import corpoGuincho from '../imagens/corpo-guincho.png'
 import cardsClinica from '../imagens/cards-clinica.png'
+import fatec from '../imagens/fatec.png'
 import styles from '../estilos/Apresentacao.module.css'
 
 export default function Apresentacao() {
-    const linkLemonMobile = "https://github.com/Hebertz21/LemonCoinMobile/releases"
-    
+    const linkLemonMobile = "https://github.com/Hebertz21/LemonCoinMobile/releases"    
     const linkLemonWeb = "https://github.com/IntiGenovez/LemonCoin/releases"
+    const linkClinica = "https://ritasoarespsicologa.com.br"
+    const linkGuincho = "https://guinchosbc.com.br"
 
+    const scrollTo = (idSessao) => {
+        const elemento = document.getElementById(idSessao)
+
+        if(elemento) elemento.scrollIntoView({behavior: 'smooth'})
+    }
     return (
         <div className={'flex flex-col gap-8 p-0 bg-[#030712] pb-10'}>
             {/*introdução GitHub e linkedin*/}
@@ -31,10 +38,30 @@ export default function Apresentacao() {
                 </div>
                 <div className='text-center w-full md:flex md:justify-end'>
                     <p className='text-justify mr-10' style={{color: 'white'}}>
-                        Olá! Meu nome é Felipe Soares, tenho 22 anos e sou um desenvolvedor de sites e aplicativos. Sou formado em Análise e Desenvolvimento de Sistemas e tenho experiência em diversas tecnologias, incluindo React, React Native, Node.js, HTML, CSS e JavaScript.
+                        Olá! Meu nome é Felipe Soares, tenho 22 anos e sou um desenvolvedor de sites e aplicativos. Sou formado em Análise e Desenvolvimento de Sistemas e tenho experiência em diversas tecnologias, incluindo React, Android Studio, Node.js, HTML, CSS e JavaScript.
                         Apaixonado por tecnologia, estou sempre em busca de novos desafios e oportunidades para aprimorar minhas habilidades.
                     </p>
                 </div>
+            </section>
+
+            {/* Formação */}
+            <section>
+                <h1>Formação</h1>
+
+                <SessaoProj 
+                    id={"Formação"}
+                    paragrafo={<>
+                        <strong>Formação: </strong>Análise e Desenvolvimento de Sistemas <br />
+                        <strong>Tipo de Graduação: </strong>Tecnólogo <br />
+                        <strong>Instituição: </strong>Fatec São Caetano do Sul - Antonio Russo <br />
+                        <br /><br />
+                        Durante mimha graduação em Análise e Desenvolvimento de Sisemas,
+                    </>}
+
+                    img={fatec}
+
+                    estiloImg={"w-[250px]"}
+                />
             </section>
 
             {/*Projetos*/}
@@ -44,17 +71,17 @@ export default function Apresentacao() {
                     <Card
                         titulo="LemonCoin" 
                         p="LemonCoin é um aplicativo de gestão financeira para Android e Web" 
-                        link="/lemoncoin"
+                        acao={() => scrollTo('LemonCoin')}
                     />
                     <Card
                         titulo="CAS - Guincho Cleiton" 
                         p="Site para divulgação de serviço de guincho em São Bernardo do Campo" 
-                        link="https://guinchosbc.com.br"
+                        acao={() => scrollTo('GuinchoCleiton')}
                     />
                     <Card
                         titulo="Rita Soares Psicologa" 
                         p="Site feito para divulgação da clínica de uma Psicologa em São Bernardo do Campo" 
-                        link="https://ritasoarespsicologa.com.br"
+                        acao={() => scrollTo('Cuidando-de-Mim')}
                     />
                 </div>
                 <hr className='text-[#1e2939] m-10 mb-0' />
@@ -85,7 +112,7 @@ export default function Apresentacao() {
                 titulo="CAS - Guincho Cleiton"
                 paragrafo="Site desenvolvido para divulgação do serviço de guincho em São Bernardo do Campo. O site foi desenvolvido utilizando React, HTML, CSS e JavaScript. O site é responsivo, se adaptando a qualquer tamanho de tela, seja ele desktop ou mobile."
 
-                link="https://guinchosbc.com.br"
+                link={linkGuincho}
                 txtLink="Veja o site"
             />
 
@@ -96,9 +123,9 @@ export default function Apresentacao() {
                 estiloImg={"w-200"}
 
                 titulo="Clinica - Cuidando de Mim"
-                paragrafo="Site desenvolvido para a psicologa Rita Soares, para divulgação de seu trabalho com profissional. O site foi feito usando React"
+                paragrafo="Site desenvolvido para a psicologa Rita Soares, para divulgação de seu trabalho profissional.  O site foi desenvolvido utilizando React, HTML, CSS e JavaScript. O site é responsivo, se adaptando a qualquer tamanho de tela, seja ele desktop ou mobile."
 
-                link={"/"}
+                link={linkClinica}
                 txtLink="Veja o Site"
             />
         </div>

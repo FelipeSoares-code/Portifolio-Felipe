@@ -57,9 +57,11 @@ export default function SessaoProj({id, titulo, img, estiloImg, imgDireita, para
                 {!imgDireita && imagens}
                 <div className='lg:w-[45%]'>
                     <p>{paragrafo}</p>
-                    <div className='flex flex-col w-[250px] md:w-[500px] md:flex-row gap-2 mt-5 lg:justify-start'>
-                        {links}
-                    </div>
+                    {link &&
+                        <div className='flex flex-col w-[250px] md:w-[500px] md:flex-row gap-2 mt-5 lg:justify-start'>
+                            {links}
+                        </div>
+                    }                    
                 </div>
                 {/* imagem na direita */}
                 {imgDireita && imagens}
