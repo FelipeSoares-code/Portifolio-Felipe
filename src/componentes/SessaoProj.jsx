@@ -52,7 +52,7 @@ export default function SessaoProj({id, titulo, img, estiloImg, imgDireita, para
     return (
         <section id={id} className='text-white p-10'>
             <h1 className='text-center text-[25px] font-bold mb-7'>{titulo}</h1>
-            <div className='flex flex-col gap-15 lg:flex-row justify-center'>
+            <div className='flex flex-col gap-15 text-justify lg:text-left lg:flex-row justify-center'>
                 {/* imagem na esquerda */}
                 {!imgDireita && imagens}
                 <div className='lg:w-[45%]'>
@@ -66,6 +66,7 @@ export default function SessaoProj({id, titulo, img, estiloImg, imgDireita, para
                 {/* imagem na direita */}
                 {imgDireita && imagens}
             </div>
+            <hr className='text-[#1e2939] m-10 mb-0' />
         </section>
     )
 }

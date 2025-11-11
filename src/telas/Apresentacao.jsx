@@ -8,6 +8,7 @@ import corpoGuincho from '../imagens/corpo-guincho.png'
 import cardsClinica from '../imagens/cards-clinica.png'
 import fatec from '../imagens/fatec.png'
 import styles from '../estilos/Apresentacao.module.css'
+import { motion } from "framer-motion";
 
 export default function Apresentacao() {
     const linkLemonMobile = "https://github.com/Hebertz21/LemonCoinMobile/releases"    
@@ -25,28 +26,42 @@ export default function Apresentacao() {
             {/*introdução GitHub e linkedin*/}
             <section className={`${styles.introducao} lg:flex-row md:flex-col`}>
                 <div className='w-full flex flex-col gap-2'>
-                    <h1>Felipe Soares</h1>
-                    <h2>Desenvolvedor de Sites e Apps</h2>
-                    <div className={'flex gap-4'}>
-                        <Link className={styles.link} to="https://github.com/felipeSoares-code" target="_blank">
-                            GitHub
-                        </Link>
-                        <Link className={styles.link} to="https://www.linkedin.com/in/felipe-soares-125132204/" target="_blank">
-                            LinkedIn
-                        </Link>
-                    </div>
+                    <motion.p
+                        style={{ color: 'white' }}
+                        initial={{ opacity: 0, filter: "blur(10px)" }}
+                        animate={{ opacity: 1, filter: "blur(0px)" }}
+                        transition={{ duration: 2, ease: "easeOut" }}
+                    >
+                        <h1>Felipe Soares</h1>
+                        <h2>Desenvolvedor de Sites e Apps</h2>
+                        <div className={'flex gap-4'}>
+                            <Link className={styles.link} to="https://github.com/felipeSoares-code" target="_blank">
+                                GitHub
+                            </Link>
+                            <Link className={styles.link} to="https://www.linkedin.com/in/felipe-soares-125132204/" target="_blank">
+                                LinkedIn
+                            </Link>
+                        </div>
+                    </motion.p>
                 </div>
                 <div className='text-center w-full md:flex md:justify-end'>
-                    <p className='text-justify mr-10' style={{color: 'white'}}>
-                        Olá! Meu nome é Felipe Soares, tenho 22 anos e sou um desenvolvedor de sites e aplicativos. Sou formado em Análise e Desenvolvimento de Sistemas e tenho experiência em diversas tecnologias, incluindo React, Android Studio, Node.js, HTML, CSS e JavaScript.
-                        Apaixonado por tecnologia, estou sempre em busca de novos desafios e oportunidades para aprimorar minhas habilidades.
-                    </p>
+                    <motion.p
+                        style={{ color: 'white' }}
+                        initial={{ opacity: 0, filter: "blur(10px)" }}
+                        animate={{ opacity: 1, filter: "blur(0px)" }}
+                        transition={{ duration: 1.5, ease: "easeOut" }}
+                    >
+                        <p className='text-justify mr-10' style={{color: 'white'}}>
+                            Olá! Meu nome é Felipe Soares, tenho 22 anos e sou um desenvolvedor de sites e aplicativos. Sou formado em Análise e Desenvolvimento de Sistemas e tenho experiência em diversas tecnologias, incluindo React, Android Studio, Node.js, HTML, CSS e JavaScript.
+                            Apaixonado por tecnologia, estou sempre em busca de novos desafios e oportunidades para aprimorar minhas habilidades.
+                        </p>
+                    </motion.p>
                 </div>
             </section>
 
             {/* Formação */}
             <section>
-                <h1>Formação</h1>
+                <h1 className='text-center text-white text-[25px] font-bold mb-8 mt-20'>Formação</h1>
 
                 <SessaoProj 
                     id={"Formação"}
@@ -55,7 +70,7 @@ export default function Apresentacao() {
                         <strong>Tipo de Graduação: </strong>Tecnólogo <br />
                         <strong>Instituição: </strong>Fatec São Caetano do Sul - Antonio Russo <br />
                         <br /><br />
-                        Durante mimha graduação em Análise e Desenvolvimento de Sisemas,
+                        Durante minha graduação em Análise e Desenvolvimento de Sistemas, adquiri experiência prática no desenvolvimento de projetos e na engenharia de software. Além disso, tive a oportunidade de trabalhar com diversas linguagens de programação e tecnologias, como React, Node.js, Kotlin e desenvolvimento para Android, Java, entre outras.
                     </>}
 
                     img={fatec}
@@ -100,7 +115,6 @@ export default function Apresentacao() {
                 link={[linkLemonMobile, linkLemonWeb]}
                 txtLink={["Veja o LemonCoin Mobile", "Veja o LemonCoin Web"]}
             />
-            <hr className='text-[#1e2939] m-10 mb-0' />
 
             {/* Guincho Cleiton */}
             <SessaoProj 
