@@ -24,7 +24,7 @@ export default function Apresentacao() {
     return (
         <div className={'flex flex-col gap-8 p-0 bg-[#030712] pb-10'}>
             {/*introdução GitHub e linkedin*/}
-            <section className={`${styles.introducao} lg:flex-row md:flex-col`}>
+            <section className={`${styles.introducao} lg:flex-row md:flex-col h-[100vh] md:h-[90vh]`}>
                 <div className='w-full flex flex-col gap-2'>
                     <motion.p
                         style={{ color: 'white' }}
@@ -33,7 +33,7 @@ export default function Apresentacao() {
                         transition={{ duration: 2, ease: "easeOut" }}
                     >
                         <h1>Felipe Soares</h1>
-                        <h2>Desenvolvedor de Sites e Apps</h2>
+                        <h2 className='mb-5'>Desenvolvedor de Sites e Apps</h2>
                         <div className={'flex gap-4'}>
                             <Link className={styles.link} to="https://github.com/felipeSoares-code" target="_blank">
                                 GitHub
@@ -95,7 +95,7 @@ export default function Apresentacao() {
                     />
                     <Card
                         titulo="Rita Soares Psicologa" 
-                        p="Site feito para divulgação da clínica de uma Psicologa em São Bernardo do Campo" 
+                        p="Site feito para divulgação da clínica de uma Psicóloga em São Bernardo do Campo" 
                         acao={() => scrollTo('Cuidando-de-Mim')}
                     />
                 </div>
@@ -136,8 +136,8 @@ export default function Apresentacao() {
                 img={cardsClinica}
                 estiloImg={"w-200"}
 
-                titulo="Clinica - Cuidando de Mim"
-                paragrafo="Site desenvolvido para a psicologa Rita Soares, para divulgação de seu trabalho profissional.  O site foi desenvolvido utilizando React, HTML, CSS e JavaScript. O site é responsivo, se adaptando a qualquer tamanho de tela, seja ele desktop ou mobile."
+                titulo="Clínica - Cuidando de Mim"
+                paragrafo="Site desenvolvido para a psicóloga Rita Soares, para divulgação de seu trabalho profissional.  O site foi desenvolvido utilizando React, HTML, CSS e JavaScript. O site é responsivo, se adaptando a qualquer tamanho de tela, seja ele desktop ou mobile."
 
                 link={linkClinica}
                 txtLink="Veja o Site"

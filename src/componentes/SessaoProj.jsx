@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function SessaoProj({id, titulo, img, estiloImg, imgDireita, paragrafo, link, txtLink}) {
-    const linkClasses = "no-underline text-white font-bold bg-[#1b41aa] px-5 py-2 rounded hover:underline";
+    const linkClasses = "no-underline text-white font-bold bg-[#1b41aa] px-5 py-2 rounded hover:underline transition text-center";
     const imgClasses = `${estiloImg} rounded-[20px] border-2 border-[#1e2939] shadow-lg`
     imgDireita = (imgDireita == true) //garante que imgDireita seja booleano
 
@@ -58,7 +58,7 @@ export default function SessaoProj({id, titulo, img, estiloImg, imgDireita, para
                 <div className='lg:w-[45%]'>
                     <p>{paragrafo}</p>
                     {link &&
-                        <div className='flex flex-col w-[250px] md:w-[500px] md:flex-row gap-2 mt-5 lg:justify-start'>
+                        <div className='flex flex-col w-[100%] md:w-[500px] md:flex-row gap-5 mt-5 lg:justify-start'>
                             {links}
                         </div>
                     }                    

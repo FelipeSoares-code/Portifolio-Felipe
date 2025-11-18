@@ -7,7 +7,6 @@
 .introducao {
     background-image: linear-gradient(to bottom, black, #0c1b44); 
     background-color: #030e2d;
-    height: 100vh;
 
     display: flex;
     justify-content: left;
